@@ -5,7 +5,15 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 
 public class HelloController {
+
+    private Integer counter = 0;
+
+    @FXML
+    private Label counterLabel;
+
     public void onPushMeButton(ActionEvent actionEvent) {
-        System.out.println("Teszt!");
+        counter++;
+        counterLabel.setText(counter.toString());
+        System.out.println("Counter értéke: " + counter);
     }
 }
